@@ -1,0 +1,795 @@
+:root {
+    --kakimasu-color: #BF3F57;
+    --duolingo-color: #58CC02;
+    --renzo-color: #4361EE;
+    --lingodeer-color: #FFA45C;
+    --kanji-study-color: #2D3748;
+    --hellotalk-color: #1DA1F2;
+}
+
+/* Case Study Styles */
+.case-study-container {
+    padding: 128px 0 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+/* Table of Contents */
+.table-of-contents {
+    position: fixed;
+    top: 128px;
+    width: 220px;
+    flex-shrink: 0;
+    left: 8px;
+}
+
+.toc-title {
+    display: none;
+}
+
+.toc-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.toc-link {
+    font-family: 'Supreme', sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    padding-left: 8px;
+    border-left: 2px solid transparent;
+}
+
+.toc-link:hover, .toc-link.active {
+    opacity: 1;
+    color: var(--accent-color);
+    border-left: 2px solid var(--accent-color);
+}
+
+.case-study-content {
+    flex: 1;
+    margin-left: 300px;
+    padding-right: 8px;
+}
+
+/* Case Study Header */
+.case-study-header {
+    margin-bottom: 96px;
+}
+
+.project-title {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-color);
+    margin-bottom: 24px;
+}
+
+.project-subtitle {
+    font-family: 'Supreme', sans-serif;
+    font-size: 32px;
+    line-height: 1.4;
+    color: var(--text-color);
+    max-width: 800px;
+}
+
+/* Case Study Sections */
+.case-study-section {
+    margin-bottom: 128px;
+}
+
+.section-title {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-color);
+    margin-bottom: 48px;
+}
+
+.content-block {
+    margin-bottom: 48px;
+    max-width: 800px;
+}
+
+.content-block h3 {
+    font-family: 'Supreme', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+.content-block h4 {
+    font-family: 'Supreme', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.content-block p {
+    font-family: 'Supreme', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 24px;
+}
+
+.content-block ul {
+    margin-bottom: 32px;
+    padding-left: 24px;
+}
+
+.content-block li {
+    font-family: 'Supreme', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.content-block li h4 {
+    margin-bottom: 4px;
+}
+
+.content-block li p {
+    margin-bottom: 16px;
+}
+
+/* Project Overview Grid */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.overview-item h3 {
+    font-family: 'Supreme', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+
+.overview-item p {
+    font-family: 'Supreme', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+/* Images */
+.image-container {
+    margin-bottom: 48px;
+    width: 100%;
+}
+
+.case-study-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--card-border);
+    transition: border-color 0.3s ease;
+}
+
+.image-container:hover .case-study-image {
+    border-color: var(--accent-color);
+}
+
+.image-caption {
+    font-family: 'Supreme', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-top: 8px;
+}
+
+/* Testimonial */
+.testimonial {
+    font-family: 'Supreme', sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-style: italic;
+    padding: 24px;
+    border-left: 4px solid var(--accent-color);
+    margin: 32px 0;
+    background-color: rgba(var(--bg-color-rgb), 0.5);
+}
+
+/* Prototype Link */
+.prototype-link {
+    margin: 48px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.case-study-button {
+    font-family: 'Supreme', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 16px 32px;
+    transition: all 0.3s ease;
+}
+
+.case-study-button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Next Project */
+.next-project {
+    margin: 128px 0 64px;
+}
+
+.next-project h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 24px;
+}
+
+.next-project-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 32px 0;
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+}
+
+.next-project-link:hover {
+    border-color: var(--accent-color);
+}
+
+.project-name {
+    font-family: 'Supreme', sans-serif;
+    font-size: 32px;
+    color: var(--text-color);
+}
+
+.arrow {
+    font-family: 'Supreme', sans-serif;
+    font-size: 32px;
+    color: var(--accent-color);
+}
+
+/* Footer */
+.case-study-footer {
+    padding: 64px 8px;
+    margin-top: 64px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 64px;
+}
+
+/* Competitive Analysis Charts */
+.chart-container {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+}
+
+.chart-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+canvas {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+/* Persona Cards */
+.persona-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin: 32px 0;
+}
+
+.persona-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.persona-card:hover {
+    border-color: var(--accent-color);
+}
+
+.persona-header {
+    padding: 24px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.persona-header h4 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.persona-type {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--accent-color);
+    margin: 4px 0 0;
+}
+
+.persona-content {
+    padding: 24px;
+}
+
+.persona-section {
+    margin-bottom: 24px;
+}
+
+.persona-section:last-child {
+    margin-bottom: 0;
+}
+
+.persona-section h5 {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 12px;
+    color: var(--text-color);
+}
+
+.persona-section ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.persona-section li {
+    margin-bottom: 8px;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.persona-section li:last-child {
+    margin-bottom: 0;
+}
+
+/* Color and Typography Cards */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.color-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.color-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+}
+
+.color-preview {
+    height: 120px;
+    width: 100%;
+}
+
+.color-info {
+    padding: 16px;
+}
+
+.color-info h5 {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 4px;
+    color: var(--text-color);
+}
+
+.color-info p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 8px;
+    font-family: 'Supreme', monospace;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.color-usage {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-color);
+    opacity: 0.7;
+    display: block;
+}
+
+.typography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.typography-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.typography-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+}
+
+.font-preview {
+    padding: 24px;
+    border-bottom: 1px solid var(--card-border);
+    text-align: center;
+}
+
+.font-sample {
+    font-size: 64px;
+    line-height: 1;
+    display: block;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+.font-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.font-info {
+    padding: 16px;
+}
+
+.font-info h5 {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 4px;
+    color: var(--text-color);
+}
+
+.font-info p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 8px;
+    font-family: 'Supreme', monospace;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.font-usage {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-color);
+    opacity: 0.7;
+    display: block;
+}
+
+/* NLP Demo Card */
+.nlp-demo-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 32px;
+    margin: 32px 0;
+    transition: all 0.3s ease;
+}
+
+.nlp-demo-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(var(--bg-color-rgb), 0.1);
+}
+
+.nlp-input {
+    font-family: 'Supreme', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--text-color);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--card-border);
+    width: 100%;
+    padding: 16px 0;
+    margin-bottom: 32px;
+}
+
+.nlp-input::placeholder {
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.nlp-result {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.nlp-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nlp-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.nlp-value {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+.nlp-highlight {
+    background: linear-gradient(120deg, rgba(var(--bg-color-rgb), 0.1) 0%, rgba(var(--bg-color-rgb), 0.05) 100%);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .project-title {
+        font-size: 96px;
+    }
+    
+    .section-title {
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .table-of-contents {
+        display: none;
+    }
+    
+    .case-study-container {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .case-study-container {
+        padding-top: 96px;
+    }
+    
+    .case-study-header {
+        margin-bottom: 64px;
+    }
+    
+    .project-title {
+        font-size: 72px;
+    }
+    
+    .project-subtitle {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 48px;
+        margin-bottom: 32px;
+    }
+    
+    .case-study-section {
+        margin-bottom: 96px;
+    }
+    
+    .overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .content-block h3 {
+        font-size: 28px;
+    }
+    
+    .content-block p, 
+    .content-block li {
+        font-size: 18px;
+    }
+    
+    .next-project {
+        margin: 96px 0 48px;
+    }
+    
+    .chart-container {
+        padding: 1rem;
+    }
+
+    canvas {
+        height: auto;
+    }
+
+    .persona-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .color-grid,
+    .typography-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin: 24px 0;
+    }
+
+    .nlp-demo-card {
+        padding: 24px;
+    }
+
+    .nlp-input {
+        font-size: 18px;
+    }
+
+    .nlp-result {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .case-study-container {
+        padding-top: 64px;
+    }
+    
+    .case-study-header {
+        margin-bottom: 48px;
+    }
+    
+    .project-title {
+        font-size: 48px;
+    }
+    
+    .project-subtitle {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+    
+    .case-study-section {
+        margin-bottom: 64px;
+    }
+    
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .content-block h3 {
+        font-size: 24px;
+    }
+    
+    .content-block p, 
+    .content-block li {
+        font-size: 16px;
+    }
+    
+    .testimonial {
+        font-size: 18px;
+        padding: 16px;
+    }
+    
+    .case-study-button {
+        font-size: 18px;
+        padding: 12px 24px;
+        width: 100%;
+    }
+    
+    .next-project h2 {
+        font-size: 36px;
+    }
+    
+    .project-name, 
+    .arrow {
+        font-size: 24px;
+    }
+
+    .persona-header {
+        padding: 16px;
+    }
+
+    .persona-content {
+        padding: 16px;
+    }
+
+    .persona-header h4 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .persona-type {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .persona-section h5 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .color-grid,
+    .typography-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 16px 0;
+    }
+
+    .color-preview {
+        height: 100px;
+    }
+
+    .font-sample {
+        font-size: 48px;
+    }
+
+    .nlp-demo-card {
+        padding: 16px;
+    }
+
+    .nlp-result {
+        grid-template-columns: 1fr;
+    }
+} 

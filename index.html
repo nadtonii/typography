@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Typography Portfolio">
+    <title>Typography Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
+</head>
+<body>
+    <div id="home" class="frame-68">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#home">home</a>
+                <a href="#projects">projects</a>
+                <a href="#about">about</a>
+                <a href="#contact">contact</a>
+            </div>
+            <button class="theme-switcher" aria-label="Toggle theme">
+                <span class="theme-icon"></span>
+            </button>
+        </nav>
+        
+        <div class="hero-text">
+            <h1>TONI NAĐ</h1>
+            <p>Product designer<span class="orange-dot">.</span></p>
+        </div>
+    </div>
+
+    <section id="projects" class="project-section">
+        <div class="project-card">
+            <div class="card-content">
+                <div class="text-content">
+                    <div class="title-wrapper">
+                        <h2>Kakimasu</h2>
+                    </div>
+                    <div class="description-wrapper">
+                        <p class="description">Japanese learning app</p>
+                        <a href="kakimasu-case-study.html" class="case-study-button">View case study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-image">
+                <!-- Image will be added via CSS background -->
+            </div>
+        </div>
+
+        <div class="project-card project-card-right">
+            <div class="card-content card-content-blue">
+                <div class="text-content">
+                    <div class="title-wrapper">
+                        <h2>Stack</h2>
+                    </div>
+                    <div class="description-wrapper">
+                        <p class="description">Task management app</p>
+                        <a href="stack-case-study.html" class="case-study-button">View case study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-image project-image-stack">
+                <!-- Image will be added via CSS background -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="design-values">
+        <h2 class="large-heading">
+            My design<br>
+            <span class="values-text">values<span class="period">.</span></span>
+        </h2>
+        
+        <div class="values-content">
+            <div class="values-grid">
+                <div class="value-text">
+                    <p>I've always believed that <span class="emphasis">simplicity</span> and <span class="emphasis">accessibility</span> are two sides of the same coin. Growing up, I was fascinated by how the most elegant solutions were often the simplest ones. This wasn't just about minimalism – it was about clarity of purpose. Every element should exist for a reason, every interaction should feel natural. When I design, I constantly ask myself: "Could this be simpler? Could this be clearer?" It's not about stripping away complexity – sometimes complexity is necessary – but about thoughtfully organizing it. Like a well-designed map that helps you navigate a complex city, good design should guide users without overwhelming them.</p>
+                </div>
+                <div class="value-text">
+                    <p>The principles of <span class="emphasis">iteration</span> and <span class="emphasis">balance</span> have shaped my entire approach to design. I learned early in my career that the best products aren't born from grand, isolated visions – they emerge through constant refinement and careful observation. Data guides us but shouldn't control us. I've seen how the sweet spot often lies between quantitative insights and human intuition. This balance extends to every aspect of my work: between aesthetics and functionality, between innovation and reliability, between systematic thinking and creative exploration. It's about finding that perfect middle ground where technology meets human needs, where metrics meet emotions, and where efficiency meets delight.</p>
+                </div>
+            </div>
+            
+            <div class="about-me">
+                <p>I am 23 years old, living in Zagreb, Croatia. Being a product designer and creating intuitive and user-friendly experiences is my passion. I went to Technical and Natural Sciences High School Ruđer Bošković Osijek, where I studied Graphic Design and Multimedia. Finishing school made me realize that I'm more interested in the user experience and the interaction between the user and the product, than designing pretty logos and creating websites.</p>
+            </div>
+        </div>
+
+        <div class="pantone-scroll">
+            <div class="pantone-container">
+                <!-- Original set -->
+                <img src="pantonecards/threeam.png" alt="Three AM Pantone" class="pantone-card">
+                <img src="pantonecards/party.png" alt="Party Pantone" class="pantone-card">
+                <img src="pantonecards/onthelow.png" alt="On The Low Pantone" class="pantone-card">
+                <img src="pantonecards/headbangers.png" alt="Headbangers Pantone" class="pantone-card">
+                <img src="pantonecards/goodshit.png" alt="Good Shit Pantone" class="pantone-card">
+                <img src="pantonecards/feelingood.png" alt="Feel Good Pantone" class="pantone-card">
+                <!-- Duplicate set for infinite scroll effect -->
+                <img src="pantonecards/threeam.png" alt="Three AM Pantone" class="pantone-card">
+                <img src="pantonecards/party.png" alt="Party Pantone" class="pantone-card">
+                <img src="pantonecards/onthelow.png" alt="On The Low Pantone" class="pantone-card">
+                <img src="pantonecards/headbangers.png" alt="Headbangers Pantone" class="pantone-card">
+                <img src="pantonecards/goodshit.png" alt="Good Shit Pantone" class="pantone-card">
+                <img src="pantonecards/feelingood.png" alt="Feel Good Pantone" class="pantone-card">
+            </div>
+        </div>
+
+        <div class="current-work">
+            <h2 class="large-heading">Currently at OptimoRoute<span class="period">.</span></h2>
+            
+            <div id="contact" class="contact-section">
+                <p class="contact-text">get in touch with me<span class="period">.</span></p>
+                <div class="footer-links">
+                    <a href="mailto:hi@tnad.xyz">hi@tnad.xyz</a>
+                    <a href="https://linkedin.com" target="_blank">linkedin</a>
+                    <a href="https://instagram.com" target="_blank">instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Toni 2025. All rights reserved.</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Main content will be structured based on Figma design -->
+    </main>
+
+    <footer>
+        <!-- Footer content will be added based on Figma design -->
+    </footer>
+</body>
+</html> 

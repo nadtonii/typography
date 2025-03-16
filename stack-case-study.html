@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stack - Task Management App Case Study">
+    <title>Stack - Task Management App | Typography Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study.css">
+    <script src="theme.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html#home">home</a>
+            <a href="index.html#projects">projects</a>
+            <a href="index.html#about">about</a>
+            <a href="index.html#contact">contact</a>
+        </div>
+        <button class="theme-switcher" aria-label="Toggle theme">
+            <span class="theme-icon"></span>
+        </button>
+    </nav>
+
+    <main class="case-study-container">
+        <!-- Table of Contents -->
+        <aside class="table-of-contents">
+            <div class="toc-links">
+                <a href="#overview" class="toc-link active">Overview</a>
+                <a href="#problem" class="toc-link">Problem Statement</a>
+                <a href="#research" class="toc-link">Research & Discovery</a>
+                <a href="#design-process" class="toc-link">Design Process</a>
+                <a href="#solution" class="toc-link">Solution</a>
+                <a href="#testing" class="toc-link">Testing & Iteration</a>
+                <a href="#outcomes" class="toc-link">Impact & Results</a>
+                <a href="#next-steps" class="toc-link">Next Steps</a>
+                <a href="#reflections" class="toc-link">Reflection</a>
+            </div>
+        </aside>
+
+        <!-- Case Study Content -->
+        <div class="case-study-content">
+            <!-- Case Study Header -->
+            <header class="case-study-header">
+                <h1 class="project-title">Stack</h1>
+                <p class="project-subtitle">Reinventing Task Management Through Natural Language</p>
+            </header>
+
+            <div class="image-container">
+                <img src="images/stack-overview.png" alt="Stack App Banner" class="case-study-image">
+            </div>
+
+            <!-- Project Overview -->
+            <section class="case-study-section" id="overview">
+                <h2 class="section-title">Overview<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>Every day, millions of people struggle with task management apps that contradict their natural thinking patterns. Tools designed to boost productivity frequently become sources of frustration instead. Stack reimagines task management by aligning with how people naturally organize their thoughts and tasks.</p>
+                </div>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h3>Timeline</h3>
+                        <p>4 months</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Role</h3>
+                        <p>Product Designer</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Tools</h3>
+                        <p>Figma, Framer, React</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problem Statement -->
+            <section class="case-study-section" id="problem">
+                <h2 class="section-title">Problem Statement<span class="period">.</span></h2>
+                <div class="content-block">
+                    <h3>The Productivity Paradox</h3>
+                    <p>Traditional task management applications create a fundamental contradiction: they require so many steps to organize tasks that they actually reduce productivity instead of enhancing it. Users face multiple friction points:</p>
+                    
+                    <ul>
+                        <li>Complex forms requiring multiple fields to be filled for each task</li>
+                        <li>Excessive clicks to categorize and organize information</li>
+                        <li>Rigid structures that don't adapt to individual thinking styles</li>
+                        <li>Cognitive overhead that defeats the purpose of productivity tools</li>
+                    </ul>
+                    
+                    <p>Through user research, we discovered that people spend an average of 2-3 minutes organizing a single task across multiple fields and categories—valuable time that could be spent on actual productive work.</p>
+                </div>
+            </section>
+
+            <!-- Research & Discovery -->
+            <section class="case-study-section" id="research">
+                <h2 class="section-title">Research & Discovery<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>To deeply understand user frustrations with existing task management solutions, we conducted:</p>
+                    
+                    <ul>
+                        <li>15 in-depth user interviews with professionals across various industries</li>
+                        <li>Competitive analysis of 8 leading task management applications</li>
+                        <li>Journey mapping sessions to identify key pain points in the task creation workflow</li>
+                    </ul>
+                    
+                    <h3>Key Research Insights</h3>
+                    <p>Our research revealed that users predominantly experience friction at the task creation and organization stages. Most significantly, we discovered a critical disconnect between how people naturally think about their tasks and how apps require them to input this information.</p>
+                </div>
+                
+                <div class="persona-grid">
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <h4>Alex, 32</h4>
+                            <p class="persona-type">Product Manager in Brooklyn</p>
+                        </div>
+                        
+                        <div class="persona-content">
+                            <div class="persona-section">
+                                <h5>User Needs</h5>
+                                <p>Alex manages multiple simultaneous projects with overlapping deadlines. He needs an organizational tool that minimizes setup time and streamlines task entry while providing reliable reminders.</p>
+                            </div>
+                            
+                            <div class="persona-section">
+                                <h5>User Mindset</h5>
+                                <p>Alex seeks simplicity and immediate utility. He abandons tools that present a steep learning curve or complex interfaces, as they create additional work rather than reducing it.</p>
+                            </div>
+                            
+                            <div class="persona-section">
+                                <h5>Key Characteristics</h5>
+                                <ul>
+                                    <li>Manages tight deadlines</li>
+                                    <li>Juggles multiple projects simultaneously</li>
+                                    <li>Values quick setup and minimal friction</li>
+                                    <li>Needs seamless integration into existing workflows</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Design Process -->
+            <section class="case-study-section" id="design-process">
+                <h2 class="section-title">Design Process<span class="period">.</span></h2>
+                <div class="content-block">
+                    <h3>Journey Mapping</h3>
+                    <p>Our journey mapping sessions revealed critical insights that directly influenced our design decisions:</p>
+                    
+                    <ul>
+                        <li><strong>Task Input Friction</strong>: Users spent disproportionate time formatting and organizing tasks rather than capturing them</li>
+                        <li><strong>Cognitive Load</strong>: Context switching between different views and categories created mental fatigue</li>
+                        <li><strong>Flow Disruption</strong>: Traditional interfaces interrupted users' natural thinking processes</li>
+                    </ul>
+                    
+                    <p>These findings pointed to a clear opportunity: reimagine task management around natural human expression rather than structured data entry.</p>
+                </div>
+                
+                <div class="image-container">
+                    <img src="images/design-iterations.jpg" alt="Design iterations showing the evolution of the natural language interface" class="case-study-image">
+                </div>
+                
+                <div class="content-block">
+                    <h3>Design Evolution</h3>
+                    <p>The design process focused on creating an interface that felt conversational rather than transactional. Early prototypes explored various input methods before landing on a clean, message-like interface that would feel familiar to users.</p>
+                </div>
+            </section>
+
+            <!-- Solution -->
+            <section class="case-study-section" id="solution">
+                <h2 class="section-title">Solution<span class="period">.</span></h2>
+                <div class="content-block">
+                    <h3>Natural Language Processing at the Core</h3>
+                    <p>Stack transforms task management through sophisticated natural language processing (NLP) that allows users to create and organize tasks exactly as they would describe them to another person.</p>
+                    
+                    <h4>1. Natural Task Input</h4>
+                    <p>Users simply type or speak naturally:</p>
+                    
+                    <div class="nlp-demo-card">
+                        <div class="nlp-input">
+                            "Meeting with <span class="nlp-highlight">Sarah</span> about the <span class="nlp-highlight">project</span> <span class="nlp-highlight">tomorrow</span> at <span class="nlp-highlight">2pm</span>"
+                        </div>
+                        <div class="nlp-result">
+                            <div class="nlp-item">
+                                <span class="nlp-label">Task Type</span>
+                                <span class="nlp-value">Meeting</span>
+                            </div>
+                            <div class="nlp-item">
+                                <span class="nlp-label">Participants</span>
+                                <span class="nlp-value">Sarah</span>
+                            </div>
+                            <div class="nlp-item">
+                                <span class="nlp-label">Topic</span>
+                                <span class="nlp-value">Project</span>
+                            </div>
+                            <div class="nlp-item">
+                                <span class="nlp-label">Date</span>
+                                <span class="nlp-value">Tomorrow</span>
+                            </div>
+                            <div class="nlp-item">
+                                <span class="nlp-label">Time</span>
+                                <span class="nlp-value">2:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>2. Intelligent Organization</h4>
+                    <p>The NLP engine goes beyond basic parsing to provide sophisticated organization:</p>
+                    
+                    <ul>
+                        <li><strong>Task Categorization</strong>: Automatically identifies task types (meetings, deadlines, reminders) based on contextual clues</li>
+                        <li><strong>Temporal Intelligence</strong>: Processes various time expressions from specific dates to relative terms like "tomorrow" or "next week"</li>
+                        <li><strong>Contextual Linking</strong>: Connects tasks to relevant projects and workspaces based on mentioned keywords</li>
+                        <li><strong>Priority Assessment</strong>: Determines importance through key phrases and temporal context</li>
+                    </ul>
+                </div>
+                
+                <div class="image-container">
+                    <img src="images/user-flow-diagram.jpg" alt="Stack user flow diagram showing the streamlined process" class="case-study-image">
+                </div>
+                
+                <div class="content-block">
+                    <h3>User Flow Reimagined</h3>
+                    <p>The redesigned user flow eliminates traditional multi-step task creation:</p>
+                    
+                    <ul>
+                        <li><strong>Task Creation</strong>: Users express tasks naturally with immediate visual feedback as the system recognizes key elements</li>
+                        <li><strong>Smart Organization</strong>: The system automatically categorizes, schedules, and links tasks based on recognized patterns</li>
+                        <li><strong>Review & Refinement</strong>: Users can quickly verify and adjust any automatically assigned attributes, with the system learning from these adjustments over time</li>
+                    </ul>
+                    
+                    <h3>Visual Design System</h3>
+                    <p>The interface was designed to make complex technology feel simple and approachable:</p>
+                    
+                    <ul>
+                        <li>Clean, minimal UI that puts focus on the content</li>
+                        <li>Visual feedback that subtly confirms NLP recognition</li>
+                        <li>Progressive disclosure of organizational features</li>
+                        <li>Consistent color-coding for task categories and priorities</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Testing & Iteration -->
+            <section class="case-study-section" id="testing">
+                <h2 class="section-title">Testing & Iteration<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>We conducted three rounds of usability testing with 12 participants matching our target user profiles. Key findings included:</p>
+                    
+                    <ul>
+                        <li>Initial confusion about the capabilities of the NLP system</li>
+                        <li>Uncertainty about how to edit incorrectly interpreted information</li>
+                        <li>Desire for more visual confirmation of successful task creation</li>
+                    </ul>
+                    
+                    <p>These insights led to several critical iterations:</p>
+                    
+                    <ul>
+                        <li>Addition of subtle highlighting as the system recognizes different elements in real-time</li>
+                        <li>Implementation of a more intuitive editing interface</li>
+                        <li>Enhanced feedback mechanisms to confirm successful task creation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Outcomes -->
+            <section class="case-study-section" id="outcomes">
+                <h2 class="section-title">Impact & Results<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>The introduction of Stack's natural approach to task management has delivered significant measurable improvements:</p>
+                    
+                    <ul>
+                        <li><strong>75% reduction</strong> in task organization time</li>
+                        <li><strong>89% satisfaction rate</strong> with the natural language interface</li>
+                        <li><strong>3× increase</strong> in task completion rates</li>
+                        <li><strong>68% decrease</strong> in app abandonment during the onboarding process</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Reflection -->
+            <section class="case-study-section" id="reflections">
+                <h2 class="section-title">Reflection<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>This project reinforced the importance of designing with users' natural behaviors in mind rather than forcing users to adapt to technology. By aligning the product with existing mental models, we were able to create an experience that feels intuitive and effortless.</p>
+                    <p>The biggest challenge was balancing the power of NLP technology with a simple, approachable interface. Future iterations will focus on expanding the NLP capabilities while maintaining the streamlined experience that users have come to value.</p>
+                </div>
+            </section>
+
+            <!-- Next Project -->
+            <section class="next-project">
+                <h2>Next Project<span class="period">.</span></h2>
+                <a href="kakimasu-case-study.html" class="next-project-link">
+                    <span class="project-name">Kakimasu - Japanese Learning App</span>
+                    <span class="arrow">→</span>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="case-study-footer">
+        <div class="footer-content">
+            <p class="contact-text">get in touch with me<span class="period">.</span></p>
+            <div class="footer-links">
+                <a href="mailto:hi@tnad.xyz">hi@tnad.xyz</a>
+                <a href="https://linkedin.com" target="_blank">linkedin</a>
+                <a href="https://instagram.com" target="_blank">instagram</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Toni 2025. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script to handle active state for table of contents links
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.case-study-section');
+            const tocLinks = document.querySelectorAll('.toc-link');
+            
+            // Function to update active link based on scroll position
+            function updateActiveLink() {
+                let currentSectionId = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    // 150px offset to account for navbar and some padding
+                    if (window.scrollY >= sectionTop - 150) {
+                        currentSectionId = section.getAttribute('id');
+                    }
+                });
+                
+                // Update active class on TOC links
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Listen for scroll events
+            window.addEventListener('scroll', updateActiveLink);
+            
+            // Initialize on page load
+            updateActiveLink();
+        });
+    </script>
+</body>
+</html> 

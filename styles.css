@@ -1,0 +1,729 @@
+/* Reset styles */
+:root {
+    /* Light theme (default) */
+    --bg-color: #FFFFFF;
+    --bg-color-rgb: 255, 255, 255;
+    --text-color: #2F3340;
+    --card-bg: #FFFFFF;
+    --card-border: #E5E5E5;
+    --accent-color: #FF5C00;
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --bg-color-rgb: 0, 0, 0;
+    --text-color: #F5F5F0;
+    --card-bg: #1A1A1A;
+    --card-border: #333333;
+    --accent-color: #FF5C00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+}
+
+body {
+    font-family: 'Supreme', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    width: 48px;
+    height: 24px;
+    border: 1px solid var(--text-color);
+    background: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    margin-right: 8px;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.theme-icon {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    background: var(--text-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .theme-icon {
+    transform: translateX(24px);
+}
+
+/* Layout */
+.frame-68 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+    padding-top: 128px;
+}
+
+/* Navigation */
+.navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 16px 8px;
+    transition: transform 0.3s ease;
+    background-color: var(--bg-color);
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 8px;
+    margin-right: 24px;
+}
+
+.navbar a {
+    font-family: 'Supreme', sans-serif;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: lowercase;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Text */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 128px);
+    justify-content: center;
+}
+
+.hero-text h1, 
+.hero-text p {
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+
+.hero-text h1 {
+    font-size: min(250px, 17.361vw);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.032;
+}
+
+.hero-text p {
+    font-size: min(244px, 16.944vw);
+    font-weight: 700;
+    text-transform: none;
+    line-height: 1.057;
+    white-space: nowrap;
+}
+
+.orange-dot,
+.period {
+    color: var(--accent-color);
+}
+
+/* Project Section */
+.project-section {
+    padding: 0;
+    margin-top: 128px;
+    margin-bottom: 128px; /* Add bottom margin to prevent overlap */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative; /* Add position relative */
+}
+
+.project-card {
+    width: calc(50% - 48px); /* Half width minus half of desired space between */
+    height: min(436px, 30.278vw);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:first-child {
+    margin-left: 8px; /* Align with the edge */
+}
+
+.project-card:last-child {
+    margin-right: 8px; /* Align with the edge */
+}
+
+.card-content {
+    width: 100%;
+    height: min(265px, 18.403vw);
+    background-color: var(--card-bg);
+    position: relative;
+    border: 1px solid var(--card-border);
+    transition: border-color 0.3s ease;
+    padding: min(64px, 4.444vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-content:hover {
+    border-color: var(--accent-color);
+}
+
+.card-content-blue {
+    background-color: var(--card-bg);
+}
+
+.text-content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title-wrapper h2 {
+    font-family: 'Supreme', sans-serif;
+    color: var(--text-color);
+    font-size: min(40px, 2.778vw);
+    line-height: min(40px, 2.778vw);
+    font-weight: 400;
+    margin-bottom: min(8px, 0.556vw);
+}
+
+.description-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.description {
+    color: var(--text-color);
+    font-size: min(24px, 1.667vw);
+    line-height: min(24px, 1.667vw);
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.case-study-button {
+    font-family: 'Supreme', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 20px;
+    width: fit-content;
+    padding: 8px 16px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.case-study-button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.project-image {
+    position: absolute;
+    right: 0;
+    top: min(71px, 4.931vw);
+    width: min(312px, 21.667vw);
+    height: min(365px, 25.347vw);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    background-image: url('images/kakimasu-mockup.png');
+}
+
+.project-card:hover .project-image {
+    opacity: 1;
+}
+
+.project-image-stack {
+    background-image: url('images/stack-mockup.png');
+}
+
+/* Responsive styles */
+@media screen and (min-width: 1440px) {
+    .hero-text h1 {
+        font-size: min(250px, 17.361vw);
+    }
+    
+    .hero-text p {
+        font-size: min(244px, 16.944vw);
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .hero-text {
+        height: calc(100vh - 256px);
+        padding: 0 32px;
+    }
+
+    .hero-text h1 {
+        font-size: 17vw;
+        line-height: 0.95;
+        margin-bottom: -1vw;
+    }
+    
+    .hero-text p {
+        font-size: 16vw;
+        line-height: 0.95;
+    }
+
+    .project-section {
+        margin-top: 256px;
+        margin-bottom: 256px;
+    }
+
+    .project-card {
+        width: calc(50% - 85px);
+        height: auto;
+        max-height: 900px;
+    }
+
+    .project-card:first-child {
+        margin-left: 8px;
+    }
+
+    .project-card:last-child {
+        margin-right: 8px;
+    }
+
+    .card-content {
+        height: auto;
+        min-height: 471px;
+        padding: 114px;
+    }
+
+    .title-wrapper h2 {
+        font-size: 71px;
+        line-height: 71px;
+        margin-bottom: 14px;
+    }
+
+    .description {
+        font-size: 43px;
+        line-height: 43px;
+    }
+
+    .case-study-button {
+        font-size: 32px;
+        line-height: 32px;
+        padding: 12px 24px;
+        height: 60px;
+    }
+
+    .project-image {
+        width: 554px;
+        height: 648px;
+        top: auto;
+        bottom: -200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .frame-68 {
+        gap: 64px;
+        padding-top: 96px;
+    }
+    
+    .nav-links {
+        flex-direction: row;
+        gap: 16px;
+        justify-content: flex-start;
+    }
+    
+    .navbar a {
+        font-size: 20px;
+    }
+
+    .project-section {
+        flex-direction: column;
+        gap: 64px;
+        padding: 0;
+    }
+
+    .project-card {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .card-content {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        padding: 32px;
+    }
+
+    .text-content {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 312px;
+        height: 365px;
+        position: relative;
+        top: -40px;
+        margin: 0 auto;
+        right: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .frame-68 {
+        gap: 32px;
+        padding-top: 64px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .theme-switcher {
+        position: absolute;
+        top: 16px;
+        right: 8px;
+    }
+    
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .project-section {
+        gap: 48px;
+    }
+
+    .project-card {
+        min-height: 400px;
+    }
+
+    .card-content {
+        min-height: 250px;
+        padding: 24px;
+    }
+
+    .text-content {
+        left: 0;
+        width: 100%;
+    }
+
+    .title-wrapper h2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .description {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .project-image {
+        max-width: 100%;
+        height: 300px;
+        top: -20px;
+        background-position: center;
+    }
+
+    .case-study-button {
+        width: 100%;
+        height: 44px;
+        font-size: 18px;
+    }
+}
+
+/* Design Values Section */
+.design-values {
+    padding: 128px 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.large-heading {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 250px;
+    font-weight: 700;
+    line-height: 258px;
+    color: var(--text-color);
+    margin-bottom: 64px;
+}
+
+.values-text {
+    color: var(--accent-color);
+}
+
+.values-text .period {
+    color: var(--text-color);
+}
+
+.values-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.values-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.value-text {
+    width: 683px;
+}
+
+.value-text:nth-child(2) {
+    align-self: flex-end;
+}
+
+.value-text p, .about-me p {
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.emphasis {
+    font-weight: 400;
+    color: var(--accent-color);
+}
+
+.about-me {
+    width: 683px;
+    margin-top: 32px;
+}
+
+.current-work {
+    margin-top: 256px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-text {
+    font-family: 'Supreme', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--text-color);
+    text-align: right;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    font-family: 'Supreme', sans-serif;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 512px;
+    text-align: center;
+}
+
+.copyright p {
+    font-family: 'Supreme', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--accent-color);
+}
+
+/* Responsive styles for design values section */
+@media screen and (max-width: 1440px) {
+    .large-heading {
+        font-size: 17.361vw;
+        line-height: calc(258 / 250 * 17.361vw);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .design-values {
+        padding: 64px 8px 0;
+        gap: 32px;
+    }
+
+    .values-grid {
+        gap: 32px;
+    }
+
+    .value-text, .about-me {
+        width: 100%;
+    }
+
+    .value-text:nth-child(2) {
+        align-self: flex-start;
+    }
+
+    .current-work {
+        margin-top: 128px;
+        gap: 32px;
+    }
+
+    .copyright {
+        margin-top: 256px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .design-values {
+        padding: 32px 8px 0;
+    }
+
+    .value-text p, .about-me p, .contact-text, .footer-links a {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .current-work {
+        margin-top: 64px;
+    }
+
+    .copyright {
+        margin-top: 128px;
+    }
+}
+
+/* Pantone Cards Scroll */
+.pantone-scroll {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top: 128px;
+    margin-bottom: 128px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pantone-container {
+    display: flex;
+    gap: 32px;
+    padding: 32px;
+    animation: scroll 60s linear infinite;
+    width: max-content;
+}
+
+.pantone-card {
+    height: 400px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+}
+
+.pantone-card:hover {
+    filter: grayscale(0);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Add responsive styles for pantone cards */
+@media screen and (max-width: 768px) {
+    .pantone-scroll {
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+
+    .pantone-container {
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .pantone-card {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pantone-scroll {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .pantone-container {
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .pantone-card {
+        height: 200px;
+    }
+} 

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kakimasu Competitive Analysis</title>
+    <style>
+        :root {
+            --kakimasu-color: #BF3F57;
+            --duolingo-color: #58CC02;
+            --renzo-color: #4361EE;
+            --lingodeer-color: #FFA45C;
+            --kanji-study-color: #2D3748;
+            --hellotalk-color: #1DA1F2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Supreme', sans-serif;
+            padding: 2rem;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .chart-container {
+            margin: 2rem 0;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .chart-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        canvas {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .key-findings {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .key-findings h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .key-findings ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .key-findings li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .chart-container {
+                padding: 1rem;
+            }
+
+            canvas {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kakimasu Competitive Analysis</h2>
+        
+        <div class="chart-container">
+            <h3 class="chart-title">Feature Comparison - Radar Analysis</h3>
+            <canvas id="radarChart"></canvas>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: var(--kakimasu-color)"></div>
+                    <span>Kakimasu</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: var(--duolingo-color)"></div>
+                    <span>Duolingo</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: var(--renzo-color)"></div>
+                    <span>Japanese! by Renzo</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: var(--lingodeer-color)"></div>
+                    <span>LingoDeer</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: var(--kanji-study-color)"></div>
+                    <span>Kanji Study</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: var(--hellotalk-color)"></div>
+                    <span>HelloTalk</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3 class="chart-title">Key Strengths Comparison</h3>
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <div class="key-findings">
+            <h3>Key Findings</h3>
+            <ul>
+                <li>Kakimasu excels in Hiragana/Katakana learning and writing practice, outperforming most competitors</li>
+                <li>Only Kanji Study matches Kakimasu's writing capabilities, but lacks Kakimasu's comprehensive approach</li>
+                <li>Duolingo leads in gamification but falls short in writing practice and kanji learning</li>
+                <li>LingoDeer offers the best grammar instruction but doesn't prioritize writing skills</li>
+                <li>Kakimasu offers the most balanced approach for beginners focused on developing proper writing skills</li>
+            </ul>
+        </div>
+    </div>
+    <script src="competitive-analysis.js"></script>
+</body>
+</html> 

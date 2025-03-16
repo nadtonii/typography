@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kakimasu - Japanese Learning App Case Study">
+    <title>Kakimasu - Japanese Learning App | Typography Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study.css">
+    <script src="theme.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html#home">home</a>
+            <a href="index.html#projects">projects</a>
+            <a href="index.html#about">about</a>
+            <a href="index.html#contact">contact</a>
+        </div>
+        <button class="theme-switcher" aria-label="Toggle theme">
+            <span class="theme-icon"></span>
+        </button>
+    </nav>
+
+    <main class="case-study-container">
+        <!-- Table of Contents -->
+        <aside class="table-of-contents">
+            <div class="toc-links">
+                <a href="#overview" class="toc-link active">Overview</a>
+                <a href="#problem" class="toc-link">Problem Statement</a>
+                <a href="#research" class="toc-link">Research & Discovery</a>
+                <a href="#design-process" class="toc-link">Design Process</a>
+                <a href="#solution" class="toc-link">Solution</a>
+                <a href="#testing" class="toc-link">Testing & Iteration</a>
+                <a href="#outcomes" class="toc-link">Impact & Results</a>
+                <a href="#next-steps" class="toc-link">Next Steps</a>
+                <a href="#reflections" class="toc-link">Reflection</a>
+            </div>
+        </aside>
+
+        <!-- Case Study Content -->
+        <div class="case-study-content">
+            <!-- Case Study Header -->
+            <header class="case-study-header">
+                <h1 class="project-title">Kakimasu</h1>
+                <p class="project-subtitle">Reimagining Japanese Language Learning</p>
+            </header>
+
+            <div class="image-container">
+                <img src="images/kakimasu-overview.png" alt="Kakimasu App Banner" class="case-study-image">
+            </div>
+
+            <!-- Project Overview -->
+            <section class="case-study-section" id="overview">
+                <h2 class="section-title">Overview<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>Kakimasu is a Japanese language learning application with a unique focus on writing skills, designed to make character acquisition intuitive and engaging. The app bridges the gap between traditional textbook-based learning and gamified language apps by providing a structured, writing-centric approach to Japanese.</p>
+                </div>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h3>Timeline</h3>
+                        <p>6 months</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Role</h3>
+                        <p>Lead UX/UI Designer</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Tools</h3>
+                        <p>Figma, Miro, Swift, CoreML</p>
+                    </div>
+                   
+                </div>
+                
+            </section>
+
+            <!-- Problem Statement -->
+            <section class="case-study-section" id="problem">
+                <h2 class="section-title">Problem Statement<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>Learning Japanese presents unique challenges due to its three writing systems (hiragana, katakana, and kanji) and the precision required for proper character formation. Existing language apps often prioritize vocabulary and speech, neglecting the critical foundation of writing skills.</p>
+                    
+                    <h3>User Pain Points</h3>
+                    <p>My research identified four critical challenges faced by Japanese language learners:</p>
+                    <ul>
+                        <li><strong>Disconnected Learning Experience</strong>: Most apps teach vocabulary and writing separately, creating a fragmented learning experience</li>
+                        <li><strong>Limited Writing Practice</strong>: Few applications offer meaningful stroke-by-stroke guidance with proper feedback</li>
+                        <li><strong>Overwhelming Progression</strong>: The path from basic hiragana to complex kanji often feels insurmountable to beginners</li>
+                        <li><strong>Lack of Context</strong>: Characters are frequently taught in isolation without meaningful vocabulary context</li>
+                    </ul>
+                    
+                    <blockquote class="testimonial">
+                        "I've tried several apps, but they all focus on vocabulary cards. I never feel confident about my writing skills or stroke order." — Hannah Lobban
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- Research & Discovery -->
+            <section class="case-study-section" id="research">
+                <h2 class="section-title">Research & Discovery<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>I conducted comprehensive market research and user studies to understand the landscape of Japanese language learning and identify opportunities for innovation.</p>
+                    
+                    <h3>User Research Methodology</h3>
+                    <ul>
+                        <li><strong>15 participants</strong> across beginner, intermediate, and advanced skill levels</li>
+                        <li><strong>45-minute testing sessions</strong> with guided tasks and think-aloud protocol</li>
+                        <li><strong>Pre-test questionnaires</strong> and post-test interviews</li>
+                        <li><strong>System Usability Scale (SUS)</strong> evaluation</li>
+                    </ul>
+                    
+                    <h3>Competitive Analysis</h3>
+                    <p>I analyzed five leading competitors (Duolingo, Japanese! by Renzo, LingoDeer, Kanji Study, and HelloTalk) to identify market gaps and opportunities:</p>
+                </div>
+                
+                <div class="chart-container">
+                    <h3 class="chart-title">Key Strengths Comparison: Kakimasu vs. Duolingo, Japanese! by Renzo, LingoDeer, Kanji Study, and HelloTalk</h3>
+                    <canvas id="barChart"></canvas>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: var(--kakimasu-color)"></div>
+                            <span>Kakimasu</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: var(--duolingo-color)"></div>
+                            <span>Duolingo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: var(--renzo-color)"></div>
+                            <span>Japanese! by Renzo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: var(--lingodeer-color)"></div>
+                            <span>LingoDeer</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: var(--kanji-study-color)"></div>
+                            <span>Kanji Study</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: var(--hellotalk-color)"></div>
+                            <span>HelloTalk</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Key Insights</h3>
+                    <ul>
+                        <li><strong>Writing Gap</strong>: Most competitors treated writing as a secondary feature, creating an opportunity for differentiation</li>
+                        <li><strong>Engagement Balance</strong>: Users wanted the engagement of gamified apps with the seriousness of academic tools</li>
+                        <li><strong>Progression Clarity</strong>: Learners needed a clear path from simple characters to complex kanji</li>
+                        <li><strong>Feedback Importance</strong>: Immediate, specific feedback on stroke quality was highly valued</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <h3>User Personas</h3>
+                    <p>Based on my research, I developed two primary personas to guide my design decisions:</p>
+                </div>
+                
+                <div class="persona-grid">
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <h4>Alex, 27</h4>
+                            <p class="persona-type">Entertainment Enthusiast</p>
+                        </div>
+                        
+                        <div class="persona-content">
+                            <div class="persona-section">
+                                <h5>Goals</h5>
+                                <ul>
+                                    <li>Learn Japanese to enjoy anime and manga without subtitles</li>
+                                    <li>Develop basic writing skills for travel to Japan</li>
+                                    <li>Fit learning into a busy schedule with short sessions</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="persona-section">
+                                <h5>Pain Points</h5>
+                                <ul>
+                                    <li>Struggles with remembering characters</li>
+                                    <li>Finds traditional learning methods boring</li>
+                                    <li>Wants cultural context with language learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <h4>Maya, 35</h4>
+                            <p class="persona-type">Academic Learner</p>
+                        </div>
+                        
+                        <div class="persona-content">
+                            <div class="persona-section">
+                                <h5>Goals</h5>
+                                <ul>
+                                    <li>Achieve comprehensive Japanese literacy</li>
+                                    <li>Master correct writing technique and stroke order</li>
+                                    <li>Understand the relationship between characters and meanings</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="persona-section">
+                                <h5>Pain Points</h5>
+                                <ul>
+                                    <li>Frustrated by apps that neglect proper writing technique</li>
+                                    <li>Wants detailed feedback on character formation</li>
+                                    <li>Needs structured progression through all writing systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Design Process -->
+            <section class="case-study-section" id="design-process">
+                <h2 class="section-title">Design Process<span class="period">.</span></h2>
+                <div class="content-block">
+                    <h3>1. Design Principles</h3>
+                    <p>I established core principles to guide my design decisions:</p>
+                    <ul>
+                        <li><strong>Balance functionality with cultural authenticity</strong></li>
+                        <li><strong>Maintain a clean, uncluttered interface</strong> with generous white space</li>
+                        <li><strong>Make complex characters the visual focus</strong></li>
+                        <li><strong>Use animation purposefully for education</strong> rather than merely decoration</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <h3>2. Design System</h3>
+                    <p>I developed a comprehensive design system that balanced minimalism with visual interest:</p>
+                    
+                    <h4>Color Palette</h4>
+                    <div class="color-grid">
+                        <div class="color-card">
+                            <div class="color-preview" style="background-color: #BF3F57"></div>
+                            <div class="color-info">
+                                <h5>Primary</h5>
+                                <p>Rich red (#BF3F57)</p>
+                                <span class="color-usage">Buttons and navigation elements</span>
+                            </div>
+                        </div>
+                        <div class="color-card">
+                            <div class="color-preview" style="background-color: #1A4789"></div>
+                            <div class="color-info">
+                                <h5>Secondary</h5>
+                                <p>Indigo blue (#1A4789)</p>
+                                <span class="color-usage">Subtitles and secondary information</span>
+                            </div>
+                        </div>
+                        <div class="color-card">
+                            <div class="color-preview" style="background-color: #F7F6F0"></div>
+                            <div class="color-info">
+                                <h5>Background</h5>
+                                <p>Off-white (#F7F6F0)</p>
+                                <span class="color-usage">Creating a paper-like feel</span>
+                            </div>
+                        </div>
+                        <div class="color-card">
+                            <div class="color-preview" style="background-color: #DEBA54"></div>
+                            <div class="color-info">
+                                <h5>Accent</h5>
+                                <p>Gold/yellow (#DEBA54)</p>
+                                <span class="color-usage">Highlights and achievements</span>
+                            </div>
+                        </div>
+                        <div class="color-card">
+                            <div class="color-preview" style="background-color: #333333"></div>
+                            <div class="color-info">
+                                <h5>Text</h5>
+                                <p>Charcoal (#333333)</p>
+                                <span class="color-usage">Maximum readability</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Typography</h4>
+                    <div class="typography-grid">
+                        <div class="typography-card">
+                            <div class="font-preview" style="font-family: 'Noto Sans Malayalam UI'">
+                                <span class="font-sample">Aa</span>
+                                <p class="font-text">The quick brown fox jumps over the lazy dog</p>
+                            </div>
+                            <div class="font-info">
+                                <h5>Primary Font</h5>
+                                <p>Noto Sans Malayalam UI</p>
+                                <span class="font-usage">Interface elements</span>
+                            </div>
+                        </div>
+                        <div class="typography-card">
+                            <div class="font-preview" style="font-family: 'jsMath-cmti10'">
+                                <span class="font-sample">Aa</span>
+                                <p class="font-text">The quick brown fox jumps over the lazy dog</p>
+                            </div>
+                            <div class="font-info">
+                                <h5>Accent Font</h5>
+                                <p>jsMath-cmti10</p>
+                                <span class="font-usage">App name and decorative elements</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="images/design-system.png" alt="Design System" class="case-study-image">
+
+                </div>
+                
+               
+                
+               
+                
+                <div class="content-block">
+                    <h3>3. Wireframing & Prototyping</h3>
+                   
+                </div>
+                
+                <div class="image-container">
+                    <img src="images/wireframes.png" alt="Wireframe Evolution" class="case-study-image">
+                    <img src="images/prototype.png" alt="Wireframe Evolution" class="case-study-image">
+                </div>
+                
+                <div class="content-block">
+                    <p>The prototype enabled me to test and refine critical interactions:</p>
+                    <ul>
+                        <li>Character introduction screens</li>
+                        <li>Stroke practice interface</li>
+                        <li>Progress tracking dashboards</li>
+                        <li>Review and assessment mechanisms</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Solution -->
+            <section class="case-study-section" id="solution">
+                <h2 class="section-title">Solution<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>The final Kakimasu application features five integrated systems I designed to create a comprehensive learning experience:</p>
+                    
+                    <h3>1. Character Learning System</h3>
+                </div>
+                
+                <div class="image-container">
+                    <img src="images/character.png" alt="Character Learning Interface" class="case-study-image">
+                    
+                </div>
+                
+                <div class="content-block">
+                    <p>A progressive system introducing Japanese characters with:</p>
+                    <ul>
+                        <li>Animated stroke order demonstrations with replay options</li>
+                        <li>Magnified view for complex character details</li>
+                        <li>Practice sessions with on-screen tracing</li>
+                        <li>Handwriting recognition with feedback on accuracy</li>
+                    </ul>
+                    
+                    <h3>2. Pronunciation Training</h3>
+                    <p>An audio-visual system connecting written characters to spoken language:</p>
+                    <ul>
+                        <li>Native speaker recordings of all sounds and syllables</li>
+                        <li>Voice recognition for pronunciation feedback</li>
+                        <li>Pitch accent visualization for tonal patterns</li>
+                        <li>Side-by-side comparison of user recordings with native examples</li>
+                    </ul>
+                    
+                    <h3>3. Contextual Learning</h3>
+                    <p>Characters are never taught in isolation:</p>
+                    <ul>
+                        <li>Characters shown building into common words</li>
+                        <li>Words demonstrated in practical sentence structures</li>
+                        <li>Cultural context provided for expressions</li>
+                        <li>Grammar points introduced alongside relevant vocabulary</li>
+                    </ul>
+                    
+                    <h3>4. Progress Tracking & Gamification</h3>
+                </div>
+                
+                <div class="image-container">
+                    <img src="images/achievements.png" alt="Progress Tracking" class="case-study-image">
+                    <img src="images/recents.png" alt="Progress Tracking" class="case-study-image">
+                  
+                </div>
+                
+                <div class="content-block">
+                    <p>Engagement features to maintain motivation:</p>
+                    <ul>
+                        <li>Daily challenges</li>
+                        <li>Achievement badges for completed milestones</li>
+                        <li>Daily streak tracking with gentle reminders</li>
+
+                    </ul>
+                    
+                  
+                </div>
+            </section>
+
+            <!-- User Testing & Iteration -->
+            <section class="case-study-section" id="testing">
+                <h2 class="section-title">Testing & Iteration<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>My rigorous testing protocol ensured the application met user needs and expectations:</p>
+                    
+                    <h3>Usability Testing Results</h3>
+                    <ul>
+                        <li><strong>87%</strong> of users successfully navigated between main sections without guidance</li>
+                        <li><strong>93%</strong> rated stroke order demonstrations as "very helpful"</li>
+                        <li><strong>100%</strong> praised the logical progression from Hiragana → Katakana → Kanji</li>
+                        <li><strong>80%</strong> found the progress tracking motivating</li>
+                    </ul>
+                    
+                    <h3>Key Iterations Based on Feedback</h3>
+                    <ul>
+                        <li><strong>Enhanced Stroke Feedback</strong>: Add real-time color indicators for correct/incorrect strokes</li>
+                        <li><strong>Onboarding Tutorial</strong>: Implement a guided tour for first-time users</li>
+                        <li><strong>Progress Celebrations</strong>: Add more prominent animations and sound effects for achievements</li>
+                        <li><strong>Expanded Examples</strong>: Increase the variety of contextual vocabulary and sentences</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Outcomes & Impact -->
+            <section class="case-study-section" id="outcomes">
+                <h2 class="section-title">Impact & Results<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>The Kakimasu application achieved strong results in user testing and initial launch metrics:</p>
+                </div>
+                
+               
+                <div class="content-block">
+                    <ul>
+                        <li><strong>SUS score of 78/100</strong>, placing it in the "Good" usability category</li>
+                        <li><strong>Top-rated aspects</strong>: Ease of character viewing (4.6/5) and logical content organization (4.3/5)</li>
+                        <li><strong>87%</strong> of testing participants indicated they would continue using the app</li>
+                        <li><strong>93%</strong> would recommend the app to others learning Japanese</li>
+                    </ul>
+                    
+                    
+                    
+                    <h3>Market Differentiation</h3>
+                    <p>Kakimasu established a unique position in the competitive landscape of Japanese language apps:</p>
+                    
+                    <ul>
+                        <li><strong>Writing-Centric Approach</strong>: Placing stroke practice at the core of the learning experience</li>
+                        <li><strong>Integrated Character Progression</strong>: Creating a seamless journey from hiragana to kanji</li>
+                        <li><strong>Clean, Focused Interface</strong>: Eliminating distractions to maintain focus on character formation</li>
+                        <li><strong>Balanced Learning Methodology</strong>: Bridging gamified apps and serious academic tools</li>
+                        <li><strong>Contextual Character Integration</strong>: Presenting characters alongside meaningful vocabulary</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Next Steps -->
+            <section class="case-study-section" id="next-steps">
+                <h2 class="section-title">Next Steps<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>Based on user feedback and market analysis, I identified several areas for future development:</p>
+                    <ul>
+                        <li><strong>Spaced Repetition System</strong>: Implementing an algorithm to optimize review scheduling</li>
+                        <li><strong>Enhanced Gamification</strong>: Adding more game-like elements to increase engagement</li>
+                        <li><strong>Expanded Cultural Content</strong>: Developing mini-lessons on Japanese culture and customs</li>
+                        <li><strong>Community Features</strong>: Creating opportunities for peer learning and motivation</li>
+                        <li><strong>Educational Partnerships</strong>: Exploring relationships with Japanese language schools</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Reflections & Learnings -->
+            <section class="case-study-section" id="reflections">
+                <h2 class="section-title">Reflection<span class="period">.</span></h2>
+                <div class="content-block">
+                    <p>The development of Kakimasu demonstrated that addressing a specific gap in the market—in this case, the lack of writing-focused Japanese learning tools—can create a compelling user experience. By maintaining a clear focus on writing skills while incorporating contextual learning and engagement features, I created an application that serves a distinct need in the language learning space.</p>
+                    <p>The project reinforced the importance of balancing different user needs—from serious academic learners to casual enthusiasts—while maintaining a consistent, focused design vision. Most importantly, it showed that educational applications can be both rigorous and engaging, challenging the false dichotomy between "serious" learning tools and "fun" gamified apps.</p>
+                </div>
+            </section>
+
+            <!-- Next Project -->
+            <section class="next-project">
+                <h2>Next Project<span class="period">.</span></h2>
+                <a href="stack-case-study.html" class="next-project-link">
+                    <span class="project-name">Stack - Task Management App</span>
+                    <span class="arrow">→</span>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="case-study-footer">
+        <div class="footer-content">
+            <p class="contact-text">get in touch with me<span class="period">.</span></p>
+            <div class="footer-links">
+                <a href="mailto:hi@tnad.xyz">hi@tnad.xyz</a>
+                <a href="https://linkedin.com" target="_blank">linkedin</a>
+                <a href="https://instagram.com" target="_blank">instagram</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Toni 2025. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script to handle active state for table of contents links
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.case-study-section');
+            const tocLinks = document.querySelectorAll('.toc-link');
+            
+            // Function to update active link based on scroll position
+            function updateActiveLink() {
+                let currentSectionId = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    // 150px offset to account for navbar and some padding
+                    if (window.scrollY >= sectionTop - 150) {
+                        currentSectionId = section.getAttribute('id');
+                    }
+                });
+                
+                // Update active class on TOC links
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Listen for scroll events
+            window.addEventListener('scroll', updateActiveLink);
+            
+            // Initialize on page load
+            updateActiveLink();
+        });
+    </script>
+    <script src="competitive-analysis.js"></script>
+</body>
+</html> 
