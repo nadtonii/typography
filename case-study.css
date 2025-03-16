@@ -613,53 +613,42 @@ canvas {
 
 @media screen and (max-width: 768px) {
     .case-study-container {
-        padding-top: 96px;
-    }
-    
-    .case-study-header {
-        margin-bottom: 64px;
-    }
-    
-    .project-title {
-        font-size: 72px;
-    }
-    
-    .project-subtitle {
-        font-size: 24px;
-    }
-    
-    .section-title {
-        font-size: 48px;
-        margin-bottom: 32px;
-    }
-    
-    .case-study-section {
-        margin-bottom: 96px;
-    }
-    
-    .overview-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .content-block h3 {
-        font-size: 28px;
-    }
-    
-    .content-block p, 
-    .content-block li {
-        font-size: 18px;
-    }
-    
-    .next-project {
-        margin: 96px 0 48px;
-    }
-    
-    .chart-container {
-        padding: 1rem;
+        flex-direction: column;
+        padding: 0;
     }
 
-    canvas {
-        height: auto;
+    .table-of-contents {
+        display: none; /* Hide table of contents on mobile */
+    }
+
+    .case-study-content {
+        width: 100%;
+        padding: 24px 16px;
+        margin-left: 0;
+    }
+
+    .project-title {
+        font-size: 48px;
+        line-height: 1;
+    }
+
+    .project-subtitle {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .section-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .content-block {
+        margin-bottom: 32px;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .persona-grid {
@@ -667,23 +656,16 @@ canvas {
         gap: 24px;
     }
 
-    .color-grid,
-    .typography-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        margin: 24px 0;
+    .image-container {
+        margin: 32px -16px;
     }
 
-    .nlp-demo-card {
-        padding: 24px;
+    .case-study-image {
+        border-radius: 0;
     }
 
-    .nlp-input {
-        font-size: 18px;
-    }
-
-    .nlp-result {
-        grid-template-columns: repeat(2, 1fr);
+    .next-project {
+        margin-top: 64px;
     }
 }
 
