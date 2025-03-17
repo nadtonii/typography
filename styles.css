@@ -147,7 +147,7 @@ body {
 }
 
 .hero-text p {
-    font-size: min(244px, 16.944vw);
+    font-size: min(244px, 16vw);
     font-weight: 700;
     text-transform: none;
     line-height: 1.057;
@@ -163,52 +163,78 @@ body {
 .project-section {
     padding: 0;
     margin-top: 128px;
-    margin-bottom: 128px; /* Add bottom margin to prevent overlap */
+    margin-bottom: 128px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 0;
+    flex-direction: column;
+    gap: 96px;
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
-    position: relative; /* Add position relative */
+    position: relative;
 }
 
 .project-card {
-    width: calc(50% - 48px); /* Half width minus half of desired space between */
-    height: min(436px, 30.278vw);
+    width: 100%;
+    height: 500px;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-.project-card:first-child {
-    margin-left: 8px; /* Align with the edge */
+.project-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-8px);
 }
 
-.project-card:last-child {
-    margin-right: 8px; /* Align with the edge */
+.project-card:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 .card-content {
-    width: 100%;
-    height: min(265px, 18.403vw);
-    background-color: var(--card-bg);
-    position: relative;
-    border: 1px solid var(--card-border);
-    transition: border-color 0.3s ease;
-    padding: min(64px, 4.444vw);
+    width: 55%;
+    height: 100%;
+    padding: 48px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
-.card-content:hover {
-    border-color: var(--accent-color);
+.project-image {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    background-size: 60% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    transition: all 0.5s ease;
 }
 
-.card-content-blue {
-    background-color: var(--card-bg);
+.project-image.project-image-stack {
+    background-image: url('images/stack-mockup.png');
+}
+
+.project-image:not(.project-image-stack) {
+    background-image: url('images/kakimasu-mockup.png');
+}
+
+.project-card:hover .project-image.project-image-stack {
+    opacity: 1;
+    transform: scale(1.05);
+    background-color: #99CAFC;
+}
+
+.project-card:hover .project-image:not(.project-image-stack) {
+    opacity: 1;
+    transform: scale(1.05);
+    background-color: #BF3F57;
 }
 
 .text-content {
@@ -216,16 +242,16 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 }
 
 .title-wrapper h2 {
-    font-family: 'Supreme', sans-serif;
+    font-family: 'Big Shoulders Display', sans-serif;
     color: var(--text-color);
-    font-size: min(40px, 2.778vw);
-    line-height: min(40px, 2.778vw);
-    font-weight: 400;
-    margin-bottom: min(8px, 0.556vw);
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
 .description-wrapper {
@@ -236,10 +262,11 @@ body {
 
 .description {
     color: var(--text-color);
-    font-size: min(24px, 1.667vw);
-    line-height: min(24px, 1.667vw);
+    font-size: 24px;
+    line-height: 1.2;
     font-weight: 400;
     opacity: 0.8;
+    max-width: 400px;
 }
 
 .case-study-button {
@@ -253,37 +280,49 @@ body {
     font-size: 20px;
     line-height: 20px;
     width: fit-content;
-    padding: 8px 16px;
-    height: 40px;
+    padding: 12px 24px;
+    height: 48px;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.case-study-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
 }
 
 .case-study-button:hover {
-    background-color: var(--accent-color);
     border-color: var(--accent-color);
     color: var(--bg-color);
 }
 
-.project-image {
+.case-study-button:hover::before {
+    transform: translateX(0);
+}
+
+.project-image::after {
+    content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     right: 0;
-    top: min(71px, 4.931vw);
-    width: min(312px, 21.667vw);
-    height: min(365px, 25.347vw);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right top;
-    opacity: 0.9;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(var(--bg-color-rgb), 0.1), rgba(var(--bg-color-rgb), 0));
+    pointer-events: none;
     transition: opacity 0.3s ease;
-    background-image: url('images/kakimasu-mockup.png');
 }
 
-.project-card:hover .project-image {
-    opacity: 1;
-}
-
-.project-image-stack {
-    background-image: url('images/stack-mockup.png');
+.project-card:hover .project-image::after {
+    opacity: 0.1; /* Reduce the overlay opacity on hover to show more of the background color */
 }
 
 /* Responsive styles */
@@ -317,26 +356,37 @@ body {
     .project-section {
         margin-top: 256px;
         margin-bottom: 256px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 64px;
     }
 
     .project-card {
-        width: calc(50% - 85px);
-        height: auto;
-        max-height: 900px;
+        width: calc(50% - 32px);
+        height: 800px;
+        max-height: none;
     }
 
     .project-card:first-child {
-        margin-left: 8px;
+        margin-left: 0;
     }
 
     .project-card:last-child {
-        margin-right: 8px;
+        margin-right: 0;
     }
 
     .card-content {
-        height: auto;
-        min-height: 471px;
-        padding: 114px;
+        height: 100%;
+        min-height: 0;
+        padding: 96px;
+    }
+
+    .project-image {
+        width: 45%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        bottom: 0;
     }
 
     .title-wrapper h2 {
@@ -355,13 +405,6 @@ body {
         line-height: 32px;
         padding: 12px 24px;
         height: 60px;
-    }
-
-    .project-image {
-        width: 554px;
-        height: 648px;
-        top: auto;
-        bottom: -200px;
     }
 }
 
@@ -388,33 +431,27 @@ body {
     }
 
     .project-card {
-        width: 100%;
         height: auto;
-        min-height: 500px;
+        flex-direction: column;
+    }
+
+    .project-card:nth-child(even) {
+        flex-direction: column;
     }
 
     .card-content {
         width: 100%;
-        height: auto;
-        min-height: 300px;
-        padding: 32px;
-    }
-
-    .text-content {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 100%;
+        padding: 48px 32px;
     }
 
     .project-image {
         width: 100%;
-        max-width: 312px;
-        height: 365px;
-        position: relative;
-        top: -40px;
-        margin: 0 auto;
-        right: auto;
+        height: 300px;
+        background-size: 50% auto;
+    }
+
+    .title-wrapper h2 {
+        font-size: 48px;
     }
 }
 
@@ -446,38 +483,28 @@ body {
     }
 
     .project-section {
-        gap: 48px;
+        gap: 64px;
     }
 
     .project-card {
-        min-height: 400px;
+        height: auto;
     }
 
     .card-content {
-        min-height: 250px;
-        padding: 24px;
+        padding: 32px 24px;
     }
 
-    .text-content {
-        left: 0;
-        width: 100%;
+    .project-image {
+        height: 250px;
+        background-size: 40% auto;
     }
 
     .title-wrapper h2 {
-        font-size: 32px;
-        line-height: 36px;
+        font-size: 36px;
     }
 
     .description {
         font-size: 20px;
-        line-height: 24px;
-    }
-
-    .project-image {
-        max-width: 100%;
-        height: 300px;
-        top: -20px;
-        background-position: center;
     }
 
     .case-study-button {
