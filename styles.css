@@ -131,6 +131,7 @@ body {
     flex-direction: column;
     height: calc(100vh - 128px);
     justify-content: center;
+    padding-right: 8px; /* Add padding to prevent dot from going off-screen */
 }
 
 .hero-text h1, 
