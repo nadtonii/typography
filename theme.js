@@ -23,7 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateNavbar = () => {
         const currentScrollY = window.scrollY;
 
-        if (currentScrollY > lastScrollY) {
+        if (currentScrollY === 0) {
+            // At the top of the page
+            navbar.classList.remove('hidden');
+        } else if (currentScrollY > lastScrollY) {
             // Scrolling down
             navbar.classList.add('hidden');
         } else {
